@@ -31,4 +31,7 @@ jobs:
         password: dckr_pat_ykrd-oqtw6lDax67-KK9iQBBpec
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2      
-      with:         app-name: '웹앱 이름' publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }} images: '도커허브 계정/github-actions-app:${{ github.sha }}'
+      with:         
+         app-name: 'cdgithubaction37'
+         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+         images: 'newtloim/flask:${{ github.sha }}'

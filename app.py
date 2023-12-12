@@ -2,7 +2,7 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/home')
-def hello():
+def home():
 	return "Home"
 
 
@@ -11,5 +11,5 @@ def hello():
 	return "Hello World!"
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=5000)
+	app.run(host='0.0.0.0', port=80)
 #로컬이라 포트만, 시작할때 app.py이름을찾기때문에.
